@@ -1,0 +1,13 @@
+[package]
+name = "wasm-rust-utils"
+version = "0.1.0"
+authors = ["Jason Nall <jsonnull@gmail.com>"]
+
+[lib]
+name = "wasm_rust_utils"
+
+[dependencies]
+clippy = { optional = true, version = "=0.0.174" }
+
+[features]
+lint = ["clippy"]
