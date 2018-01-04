@@ -1,5 +1,6 @@
 node_modules
 /packages/*/dist/
+/examples/*/build/
 /target/
 **/*.rs.bk
 Cargo.lock
