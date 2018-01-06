@@ -12,7 +12,6 @@ class CString {
 
     this.length = string_buffer.length
     this.pointer = prelude.alloc(this.length + 1)
-    console.log(this.pointer)
     this.prelude = prelude
 
     let memory = new Uint8Array(prelude.memory.buffer)
