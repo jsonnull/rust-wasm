@@ -8,7 +8,6 @@ A Rust and JavaScript utility suite for writing WebAssembly modules.
 
 ```rust
 extern crate wasm_rust_utils;
-use wasm_rust_utils::*;
 
 pub use wasm_rust_utils::prelude::*;
 
