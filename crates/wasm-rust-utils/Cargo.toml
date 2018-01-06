@@ -7,6 +7,7 @@ authors = ["Jason Nall <jsonnull@gmail.com>"]
 name = "wasm_rust_utils"
 
 [dependencies]
+memalloc = "0.1.0"
 clippy = { optional = true, version = "=0.0.174" }
 
 [features]

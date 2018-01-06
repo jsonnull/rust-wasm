@@ -1,19 +1,19 @@
-use std::mem;
+use memalloc;
 use std::ffi::{CString};
-use std::os::raw::{c_char, c_void};
+use std::os::raw::{c_char};
 
 #[no_mangle]
-pub fn alloc(size: usize) -> *mut c_void {
-    let mut buf = Vec::with_capacity(size);
-    let ptr = buf.as_mut_ptr();
-    mem::forget(buf);
-    return ptr as *mut c_void;
+pub fn alloc(size: usize) -> *mut u8 {
+    unsafe {
+        let ptr = memalloc::allocate(size);
+        ptr
+    }
 }
 
 #[no_mangle]
-pub fn dealloc(ptr: *mut c_void, cap: usize) {
+pub fn dealloc(ptr: *mut u8, size: usize) {
     unsafe  {
-        let _buf = Vec::from_raw_parts(ptr, 0, cap);
+        memalloc::deallocate(ptr as *mut u8, size);
     }
 }
 

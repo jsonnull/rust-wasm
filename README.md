@@ -28,9 +28,10 @@ loadWasm().then(module => {
   prelude.withExports(module.instance.exports)
 
   const toUppercase = str => {
-    const input = prelude.createString(str)
-    const output = module.instance.exports.to_uppercase(input)
-    return prelude.readString(output)
+    const input = prelude.CString(str)
+    const output = module.instance.exports.to_uppercase(input.pointer)
+    input.free()
+    return prelude.returnString(output)
   }
 
   console.log('uppercase of `test` is', toUppercase('test'))

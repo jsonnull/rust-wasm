@@ -15,10 +15,10 @@ loadWasm({
 
   // When calling into Rust, we are responsible for allocation and deallocation
   const opposite = str => {
-    const input = prelude.createString(str)
-    const output = module.instance.exports.opposite(input)
-    prelude.freeString(input)
-    return prelude.freeString(output)
+    const input = prelude.CString(str)
+    const output = module.instance.exports.opposite(input.pointer)
+    input.free()
+    return prelude.returnString(output)
   }
 
   console.log('the opposite of even is', opposite('even'))
@@ -26,9 +26,10 @@ loadWasm({
   // Since this fn's implementation re-uses the input pointer, only one
   // deallocation is necessary
   const toUppercase = str => {
-    const input = prelude.createString(str)
-    const output = module.instance.exports.to_uppercase(input)
-    return prelude.readString(output)
+    const input = prelude.CString(str)
+    const output = module.instance.exports.to_uppercase(input.pointer)
+    input.free()
+    return prelude.returnString(output)
   }
 
   console.log('uppercase of `test` is', toUppercase('test'))

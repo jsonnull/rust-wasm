@@ -1,3 +1,5 @@
+extern crate memalloc;
+
 pub mod browser;
 mod utils;
 pub mod prelude;

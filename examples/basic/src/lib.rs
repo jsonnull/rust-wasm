@@ -9,11 +9,11 @@ pub fn to_uppercase(ptr: JsString) -> JsString {
     // Can call functions made available from JS
     browser::log("called uppercase fn");
 
-    let mut s: String = js_string_input(ptr);
+    let input: String = js_string_input(ptr);
 
-    s = s.to_uppercase();
+    let output = input.to_uppercase();
 
-    js_string_output(s)
+    js_string_output(output)
 }
 
 #[no_mangle]

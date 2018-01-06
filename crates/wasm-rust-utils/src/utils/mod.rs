@@ -1,4 +1,4 @@
-use std::ffi::{CString};
+use std::ffi::{CString, CStr};
 use std::os::raw::{c_char};
 
 pub type JsString = *mut c_char;
@@ -12,7 +12,9 @@ pub fn js_string_input(ptr: JsString) -> String {
     let s: String;
 
     unsafe {
-        s = CString::from_raw(ptr).into_string().unwrap();
+        let cstr = CStr::from_ptr(ptr);
+        let tmp: &str = cstr.to_str().unwrap();
+        s = tmp.to_owned();
     };
 
     s
