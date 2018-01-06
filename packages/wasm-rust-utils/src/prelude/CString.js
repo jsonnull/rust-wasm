@@ -33,7 +33,6 @@ class CString {
 
     const str = new TextDecoder('utf8').decode(buf)
 
-    // FIXME: Error
     this.prelude.dealloc(this.pointer, this.length + 1)
     return str
   }
