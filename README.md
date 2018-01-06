@@ -2,8 +2,11 @@
 
 A Rust and JavaScript utility suite for writing WebAssembly modules.
 
+**Note: This is in early stages, expect frequent API changes for now.**
+
+**lib.rs**
+
 ```rust
-// lib.rs
 extern crate wasm_rust_utils;
 use wasm_rust_utils::*;
 
@@ -17,8 +20,9 @@ pub fn to_uppercase(ptr: JsString) -> JsString {
 }
 ```
 
+**index.js**
+
 ```js
-// index.js
 import { Prelude } from 'wasm-rust-utils'
 import loadWasm from './lib.rs'
 
@@ -38,11 +42,24 @@ loadWasm().then(module => {
 })
 ```
 
-For a better demo with comments, see the [example project](/examples/basic).
+## Installation
 
-**Note: This is in early stages, expect frequent API changes for now.**
+Add Rust dependency to your `Cargo.toml`
 
-# Acknowledgements
+```toml
+wasm-rust-utils = "0.1.0"
+```
+
+Install JavaScript dependency with yarn/npm
+```bash
+yarn add wasm-rust-utils
+```
+
+## Examples
+
+* [Basic](/examples/basic): A buildable demo project showing the API essentials
+
+## Acknowledgements
 
 * [HelloRust](https://github.com/badboy/hellorust) for showing how string
 passing functions are used by JavaScript and Rust 
