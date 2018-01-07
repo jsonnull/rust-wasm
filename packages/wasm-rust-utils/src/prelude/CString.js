@@ -1,4 +1,5 @@
 // @flow
+import 'fast-text-encoding'
 import Prelude from './index'
 
 class CString {
@@ -30,7 +31,7 @@ class CString {
       this.length
     )
 
-    const str = new TextDecoder('utf8').decode(buf)
+    const str = new TextDecoder('utf-8').decode(buf)
 
     this.prelude.dealloc(this.pointer, this.length + 1)
     return str

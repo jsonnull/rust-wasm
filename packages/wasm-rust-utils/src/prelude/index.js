@@ -1,5 +1,7 @@
 // @flow
+import 'fast-text-encoding'
 import CString from './CString'
+import wrap from './wrap'
 
 class Prelude {
   memory: Uint8Array
@@ -37,6 +39,10 @@ class Prelude {
 
     this.dealloc_str(ptr)
     return str
+  }
+
+  wrap(...args: any) {
+    return wrap(this, args)
   }
 }
 

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`function wrapper generator should fail with less than 2 arguments 1`] = `"Expected \`wrap\` to be called with at least 2 args"`;
+
+exports[`function wrapper generator should fail with less than 2 arguments 2`] = `"Expected \`wrap\` to be called with at least 2 args"`;
+
+exports[`function wrapper generator should fail with more than 3 arguments 1`] = `"Expected \`wrap\` to be called with up to 3 args"`;

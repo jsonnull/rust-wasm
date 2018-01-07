@@ -1,0 +1,15 @@
+[package]
+name = "examples-memory"
+version = "0.1.0"
+authors = ["Jason Nall <jsonnull@gmail.com>"]
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-rust-utils = { path = "../../crates/wasm-rust-utils" }
+clippy = { optional = true, version = "=0.0.174" }
+
+[features]
+lint = ["clippy"]
