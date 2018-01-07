@@ -23,23 +23,24 @@ pub fn to_uppercase(ptr: JsString) -> JsString {
 **index.js**
 
 ```js
-import { Prelude } from 'wasm-rust-utils'
+import { Prelude, types } from 'wasm-rust-utils'
 import loadWasm from './lib.rs'
 
 const prelude = new Prelude()
 
-loadWasm().then(module => {
-  prelude.withExports(module.instance.exports)
+loadWasm()
+  .then(module => module.instance.exports)
+  .then(exports => {
+    prelude.withExports(exports)
 
-  const toUppercase = str => {
-    const input = prelude.CString(str)
-    const output = module.instance.exports.to_uppercase(input.pointer)
-    input.free()
-    return prelude.returnString(output)
-  }
+    const toUppercase = prelude.wrap(
+      types.string,
+      types.string,
+      exports.to_uppercase
+    )
 
-  console.log('uppercase of `test` is', toUppercase('test'))
-})
+    console.log('uppercase of `test` is', toUppercase('test'))
+  })
 ```
 
 ## Installation
