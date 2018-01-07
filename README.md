@@ -2,7 +2,13 @@
 
 A Rust and JavaScript utility suite for writing WebAssembly modules.
 
-**Note: This is in early stages, expect frequent API changes for now.**
+* Write functions with near-automatic string handling and memory management
+* Ergonomic memory-management API if you want to avoid unnecessary allocations
+* No additional build-time tools required—use Cargo and your JavaScript bundler
+
+_Note: This is in early stages, expect frequent API changes for now._
+
+---
 
 **lib.rs**
 
