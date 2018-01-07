@@ -54,7 +54,7 @@ loadWasm()
 Add Rust dependency to your `Cargo.toml`
 
 ```toml
-wasm-rust-utils = "0.1.0"
+wasm-rust-utils = "0.2.0"
 ```
 
 Install JavaScript dependency with yarn/npm
