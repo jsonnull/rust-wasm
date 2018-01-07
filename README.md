@@ -65,6 +65,7 @@ yarn add wasm-rust-utils
 ## Examples
 
 * [Basic](/examples/basic): A buildable demo project showing the API essentials
+* [Memory Management](/examples/memory): The same as `basic`, but shows how to manage memory manually on the JS side
 
 ## Acknowledgements
 
