@@ -1,4 +1,4 @@
-import 'text-encoding'
+// @flow
 import Prelude from '../index'
 import types from '../../types'
 

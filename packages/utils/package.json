@@ -7,6 +7,7 @@
   "scripts": {
     "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/rust-wasm-utils.js",
     "build": "npm run build:umd",
+    "test": "jest",
     "flow": "flow",
     "lint": "eslint src"
   },
@@ -18,8 +19,5 @@
   },
   "peerDependencies": {
     "@rust-wasm/prelude": "^0.3.0"
-  },
-  "dependencies": {
-    "fast-text-encoding": "^1.0.0"
   }
 }
