@@ -1,7 +1,7 @@
 // @flow
-import Prelude from '../prelude'
+import Prelude from '@rust-wasm/prelude'
 
-export const createBrowserFunctions = (prelude: Prelude) => {
+const utilsFactory = (prelude: Prelude) => {
   return {
     js_log: (ptr: number, length: number) => {
       // Read from a Rust-owned string
@@ -10,3 +10,5 @@ export const createBrowserFunctions = (prelude: Prelude) => {
     }
   }
 }
+
+export default utilsFactory

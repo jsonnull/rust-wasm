@@ -16,6 +16,7 @@
     "webpack-cli": "^2.0.4"
   },
   "dependencies": {
-    "@rust-wasm/utils": "0.2.0"
+    "@rust-wasm/prelude": "0.3.0",
+    "@rust-wasm/utils": "0.3.0"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "jest": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "eqeqeq": 0,
+    "no-unused-vars": 2,
+    "import/no-webpack-loader-syntax": 0,
+    "flowtype/require-valid-file-annotation": [
+      2,
+      "always", {
+        "annotationStyle": "line"
+      }
+    ]
+  }
+}

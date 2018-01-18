@@ -1,6 +1,7 @@
 {
   "private": true,
   "workspaces": [
+    "packages/prelude",
     "packages/utils",
     "examples/basic",
     "examples/memory"

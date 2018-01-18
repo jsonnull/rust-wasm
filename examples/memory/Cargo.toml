@@ -8,6 +8,7 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
+rust-wasm-prelude = { path = "../../crates/prelude" }
 rust-wasm-utils = { path = "../../crates/utils" }
 clippy = { optional = true, version = "=0.0.174" }
 

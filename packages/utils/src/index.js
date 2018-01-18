@@ -1,6 +1,4 @@
 // @flow
-import Prelude from './prelude'
-import { createBrowserFunctions as browser } from './browser'
-import types from './types'
+import utilsFactory from './utils'
 
-export { Prelude, browser, types }
+export default utilsFactory

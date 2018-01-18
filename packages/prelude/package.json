@@ -1,11 +1,11 @@
 {
-  "name": "@rust-wasm/utils",
+  "name": "@rust-wasm/prelude",
   "version": "0.3.0",
-  "main": "dist/rust-wasm-utils.js",
+  "main": "dist/rust-wasm-prelude.js",
   "author": "Jason Nall <jsonnull@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/rust-wasm-utils.js",
+    "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/rust-wasm-prelude.js",
     "build": "npm run build:umd",
     "flow": "flow",
     "lint": "eslint src"
@@ -16,10 +16,8 @@
     "jest": "^22.0.4",
     "rollup": "^0.53.3"
   },
-  "peerDependencies": {
-    "@rust-wasm/prelude": "^0.3.0"
-  },
   "dependencies": {
+    "@rust-wasm/utils": "^0.3.0",
     "fast-text-encoding": "^1.0.0"
   }
 }

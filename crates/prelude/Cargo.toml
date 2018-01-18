@@ -1,5 +1,5 @@
 [package]
-name = "rust-wasm-utils"
+name = "rust-wasm-prelude"
 version = "0.3.0"
 authors = ["Jason Nall <jsonnull@gmail.com>"]
 license = "MIT"
@@ -9,9 +9,10 @@ keywords = ["wasm", "javascript"]
 categories = ["web-programming"]
 
 [lib]
-name = "rust_wasm_utils"
+name = "rust_wasm_prelude"
 
 [dependencies]
+memalloc = "0.1.0"
 clippy = { optional = true, version = "=0.0.174" }
 
 [features]

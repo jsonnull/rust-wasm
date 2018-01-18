@@ -1,13 +1,15 @@
+extern crate rust_wasm_prelude;
 extern crate rust_wasm_utils;
-use rust_wasm_utils::*;
+use rust_wasm_prelude::*;
+use rust_wasm_utils as utils;
 
 // Required: make prelude functions available to JS
-pub use rust_wasm_utils::prelude::*;
+pub use rust_wasm_prelude::exports::*;
 
 #[no_mangle]
 pub fn to_uppercase(ptr: JsString) -> JsString {
     // Can call functions made available from JS
-    browser::log("called uppercase fn");
+    utils::log("called uppercase fn");
 
     let input: String = js_string_input(ptr);
 
@@ -18,7 +20,7 @@ pub fn to_uppercase(ptr: JsString) -> JsString {
 
 #[no_mangle]
 pub fn opposite(ptr: JsString) -> JsString {
-    browser::log("called opposite fn");
+    utils::log("called opposite fn");
 
     let input: String = js_string_input(ptr);
 

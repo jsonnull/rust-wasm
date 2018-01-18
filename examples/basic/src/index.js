@@ -1,5 +1,6 @@
 // @flow
-import { Prelude, browser, types } from '@rust-wasm/utils'
+import { Prelude, types } from '@rust-wasm/prelude'
+import utilsFactory from '@rust-wasm/utils'
 import loadWasm from './lib.rs'
 
 const prelude = new Prelude()
@@ -7,7 +8,7 @@ const prelude = new Prelude()
 loadWasm({
   env: {
     // Make the browser module available to rust
-    ...browser(prelude)
+    ...utilsFactory(prelude)
   }
 })
   .then(module => module.instance.exports)
