@@ -1,5 +1,5 @@
 // @flow
-import { Prelude, browser } from 'wasm-rust-utils'
+import { Prelude, browser } from '@rust-wasm/utils'
 import loadWasm from './lib.rs'
 
 const prelude = new Prelude()

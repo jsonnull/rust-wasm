@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "crates/wasm-rust-utils",
+    "crates/utils",
     "examples/basic",
     "examples/memory"
 ]

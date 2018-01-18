@@ -1,15 +1,15 @@
 [package]
-name = "wasm-rust-utils"
+name = "rust-wasm-utils"
 version = "0.2.0"
 authors = ["Jason Nall <jsonnull@gmail.com>"]
 license = "MIT"
 description = "A Rust and JavaScript utility suite for writing WebAssembly modules."
-repository = "https://github.com/jsonnull/wasm-rust-utils"
+repository = "https://github.com/jsonnull/rust-wasm"
 keywords = ["wasm", "javascript"]
 categories = ["web-programming"]
 
 [lib]
-name = "wasm_rust_utils"
+name = "rust_wasm_utils"
 
 [dependencies]
 memalloc = "0.1.0"

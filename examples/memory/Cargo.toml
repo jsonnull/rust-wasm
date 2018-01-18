@@ -8,7 +8,7 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-rust-utils = { path = "../../crates/wasm-rust-utils" }
+rust-wasm-utils = { path = "../../crates/utils" }
 clippy = { optional = true, version = "=0.0.174" }
 
 [features]

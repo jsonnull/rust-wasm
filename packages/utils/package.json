@@ -1,0 +1,22 @@
+{
+  "name": "@rust-wasm/utils",
+  "version": "0.2.0",
+  "main": "dist/rust-wasm-utils.js",
+  "author": "Jason Nall <jsonnull@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/rust-wasm-utils.js",
+    "build": "npm run build:umd",
+    "flow": "flow",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3",
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
+    "rollup": "^0.53.3"
+  },
+  "dependencies": {
+    "fast-text-encoding": "^1.0.0"
+  }
+}
