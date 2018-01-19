@@ -1,4 +1,4 @@
-# wasm-rust-utils
+# rust-wasm
 
 A Rust and JavaScript utility suite for writing WebAssembly modules.
 
@@ -13,10 +13,12 @@ A Rust and JavaScript utility suite for writing WebAssembly modules.
 **lib.rs**
 
 ```rust
-extern crate wasm_rust_utils;
-use wasm_rust_utils::*;
+extern crate rust_wasm_prelude;
+extern crate rust_wasm_utils;
+use rust_wasm_prelude::*;
+use rust_wasm_utils as utils;
 
-pub use wasm_rust_utils::prelude::*;
+pub use rust_wasm_prelude::exports::*;
 
 #[no_mangle]
 pub fn to_uppercase(ptr: JsString) -> JsString {
@@ -29,7 +31,7 @@ pub fn to_uppercase(ptr: JsString) -> JsString {
 **index.js**
 
 ```js
-import { Prelude, types } from 'wasm-rust-utils'
+import { Prelude, types } from '@rust-wasm/prelude'
 import loadWasm from './lib.rs'
 
 const prelude = new Prelude()
@@ -54,12 +56,13 @@ loadWasm()
 Add Rust dependency to your `Cargo.toml`
 
 ```toml
-wasm-rust-utils = "0.2.0"
+rust-wasm-prelude = "0.3.0"
+rust-wasm-utils = "0.3.0"
 ```
 
 Install JavaScript dependency with yarn/npm
 ```bash
-yarn add wasm-rust-utils
+yarn add @rust-wasm/prelude @rust-wasm/utils
 ```
 
 ## Examples
