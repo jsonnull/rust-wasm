@@ -14,9 +14,7 @@ A Rust and JavaScript utility suite for writing WebAssembly modules.
 
 ```rust
 extern crate rust_wasm_prelude;
-extern crate rust_wasm_utils;
 use rust_wasm_prelude::*;
-use rust_wasm_utils as utils;
 
 pub use rust_wasm_prelude::exports::*;
 
