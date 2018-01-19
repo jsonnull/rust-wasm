@@ -1,10 +1,11 @@
 [package]
 name = "wasm-rust-utils"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Jason Nall <jsonnull@gmail.com>"]
 license = "MIT"
 description = "A Rust and JavaScript utility suite for writing WebAssembly modules."
 repository = "https://github.com/jsonnull/wasm-rust-utils"
+readme = "./README.md"
 keywords = ["wasm", "javascript"]
 categories = ["web-programming"]
 
