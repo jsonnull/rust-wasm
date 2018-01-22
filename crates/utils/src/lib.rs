@@ -1,3 +1,4 @@
+#[macro_use]
 mod utils;
 
-pub use utils::log;
+pub use utils::*;

@@ -7,7 +7,6 @@ const env = process.env.NODE_ENV
 
 const config = {
   input: 'src/index.js',
-  external: ['@rust-wasm/prelude'],
   output: {
     name: 'RustWasmUtils',
     format: 'umd'
