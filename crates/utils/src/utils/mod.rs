@@ -50,6 +50,18 @@ macro_rules! log_dispatch {
     ($a:expr, $b:expr, $c:expr, $d:expr) => {
         log_4($a, $b, $c, $d);
     };
+    ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr) => {
+        log_5($a, $b, $c, $d, $e);
+    };
+    ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr, $f:expr) => {
+        log_6($a, $b, $c, $d, $e, $f);
+    };
+    ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr, $f:expr, $g:expr) => {
+        log_7($a, $b, $c, $d, $e, $f, $g);
+    };
+    ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr, $f:expr, $g:expr, $h:expr) => {
+        log_8($a, $b, $c, $d, $e, $f, $g, $h);
+    };
 }
 
 #[macro_export]
