@@ -2,10 +2,10 @@ extern crate rust_wasm_prelude;
 #[macro_use]
 extern crate rust_wasm_utils;
 use rust_wasm_prelude::*;
-use rust_wasm_utils::*;
 
 // Required: make prelude functions available to JS
 pub use rust_wasm_prelude::exports::*;
+pub use rust_wasm_utils::exports::*;
 
 #[no_mangle]
 pub fn to_uppercase(ptr: JsString) -> JsString {
