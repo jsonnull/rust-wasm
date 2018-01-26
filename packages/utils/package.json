@@ -8,6 +8,7 @@
     "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/rust-wasm-utils.js",
     "build": "npm run build:umd",
     "test": "jest",
+    "flow-typed": "flow-typed install",
     "flow": "flow",
     "lint": "eslint src"
   },
@@ -15,6 +16,7 @@
     "cross-env": "^5.1.3",
     "eslint": "^4.14.0",
     "flow-bin": "^0.64.0",
+    "flow-typed": "^2.2.3",
     "jest": "^22.0.4",
     "rollup": "^0.53.3"
   },

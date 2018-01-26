@@ -1,0 +1,6 @@
+[libs]
+flow-typed
+
+[include]
+../prelude/package.json
+../prelude/dist/*.js
