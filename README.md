@@ -1,5 +1,8 @@
 # rust-wasm
 
+[![Build Status](https://travis-ci.org/jsonnull/rust-wasm.svg?branch=master)](https://travis-ci.org/jsonnull/rust-wasm)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jsonnull/rust-wasm.svg)](https://greenkeeper.io/)
+
 A Rust and JavaScript utility suite for writing WebAssembly modules.
 
 * Write functions with near-automatic string handling and memory management
